@@ -2,36 +2,59 @@ function changeColourTest() {
     document.getElementById("button-generator").style.backgroundColor = "green";
 }
 
-// function to return Y or N for a jammer based on a random number
-function includeJammer() {
+function includeJammer(min, max) {
+    let jammer = Math.floor(Math.random() * 3)  + 1;
 
-    // random number between 1 and 3
-    // odd number = Y
-    // even number = N
-    // return Y or N
-    
+    if(jammer === 1 || jammer === 3) {
+        jammer = "Y";
+    } else {
+        jammer = "N";
+    };
 
-    console.log("includeJammer");
+    console.log("jammer:" + jammer);
+    return jammer;
 }
 
-// function to return Y or N for a pivot based on a random number
 function includePivot() {
+    let pivot = Math.floor(Math.random() * 3)  + 1;
 
-    // random number between 1 and 3
-    // odd number = Y
-    // even number = N
-    // return Y or N
+    if(pivot === 1 || pivot === 3) {
+        pivot = "Y";
+    } else {
+        pivot = "N";
+    };
+
+    console.log("pivot:" + pivot);
+    return pivot;
 }
 
-// function to return a random number of blockers
-function numberOfBlockers() {
+const numberOfBlockers = [0, 1, 2, 3]
+const weight = [1, 2, 3, 4]
 
-    // random number between 1 and 100
-    // 1-10 = 0
-    // 11-25 = 1
-    // 26-60 = 2
-    // 61-100 = 3
-    // return number
+function numberOfBlockersOnTrack(numberOfBlockers, weight) {
+
+    // array = [0, 1, 1, 2, 2, 2, 3, 3 ,3 ,3]
+    const cumulativeWeights = [];
+
+    for (let i = 0; i < weight.length; i+=1) {
+        cumulativeWeights[i] = weight[i] + (cumulativeWeights[i-1] || 0);
+    }
+    
+    const maxCumulativeWeight = cumulativeWeights[cumulativeWeights.length - 1];
+    const rand = Math.random() * maxCumulativeWeight;
+
+    for (let blockerIndex = 0; blockerIndex < cumulativeWeights.length; blockerIndex +=1) {
+        if (cumulativeWeights[blockerIndex] >= rand) {
+            return {
+                blockers: numberOfBlockers[blockerIndex],
+                index: blockerIndex,
+            };
+        }
+
+    }
+
+    // console.log("blockers:" + cumulativeWeights);
+    // return cumulativeWeights;
 }
 
 function generatePack() {
