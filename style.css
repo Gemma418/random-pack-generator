@@ -1,4 +1,10 @@
 
+@media screen and (max-width: 600px) {
+    body {
+      font-size: 60px;
+    }
+  }
+
 /* General page style */
 * {
     box-sizing: border-box;
@@ -8,6 +14,11 @@
     font-family: Helvetica, sans-serif;
     color: rgba(15, 7, 2, 0.993);
     text-align: center;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid seashell;
 }
 
 /* Specific page style */
