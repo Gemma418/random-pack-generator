@@ -4,6 +4,7 @@
     <head>
         <title>Home</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script type = "text/javascript" src = "functions.js"></script>
     </head>
 
     <body>
@@ -11,15 +12,27 @@
             <h1>Random Pack Generator</h1>
         </div>
         <div class="page-content">
-            <div class="generate-button">
-                <button type="button">Generate!</button>
+           <!-- button to generate random pack -->
+            <div id="generate-button">
+                <button id="button-generator" onClick="changeColourTest()">Generate!</button>
             </div>
-            <div class="pack">
-                <h3>Pack1</h3>
-            </div>
-            <div class="pack">
-                <h3>Pack2</h3>
-            </div>
+
+            <section>
+                <div class="pack">
+                    <h3>Pack1</h3>
+
+                </div>
+            </section>
+
+            <section>
+                <div class="pack">
+                    <h3>Pack2</h3>
+                </div>
+            </section>
         </div>
     </body>
+
+    <footer>
+        <p class="footer-content">copywright Gemma418</p>
+    </footer>
 </html>

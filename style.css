@@ -2,10 +2,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-color: rgb(253, 192, 151);
     font-family: Helvetica, sans-serif;
-    font-size: 22px;
-    color: seashell;
+    color: rgba(15, 7, 2, 0.993);
     text-align: center;
 }
 
@@ -17,7 +16,27 @@ h1 {
 
 h3 {
     margin: 5px;
-    font-size: 25px;
+    font-size: 16px;
+}
+
+#generate-button {
+    margin: 10px;
+    width: 150px;
+    height: auto;
+    display: inline-flex;
+}
+
+#button-generator {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid seashell;
+    border-radius: 10px;
+    background-color: rgb(253, 192, 151);
+    color: rgba(15, 7, 2, 0.993);
+    font-size: 16px;
+    display: inline-flex;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .pack {
@@ -25,6 +44,9 @@ h3 {
     padding: 10px;
     border: 2px solid seashell;
     border-radius: 10px;
-    background-color: black;
-    display: inline-block;
+    display: flex;
+}
+
+.pack h3 {
+    text-align: center;
 }
