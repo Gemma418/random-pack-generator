@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: Helvetica, sans-serif;
+    font-size: 22px;
+    color: seashell;
+    text-align: center;
+}
+
+/* General page style */
+h1 {
+    margin: 5px;
+    font-size: 40px;
+}
+
+h3 {
+    margin: 5px;
+    font-size: 25px;
+}
+
+.pack {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid seashell;
+    border-radius: 10px;
+    background-color: black;
+    display: inline-block;
+}
