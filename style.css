@@ -1,3 +1,5 @@
+
+/* General page style */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,15 +10,12 @@
     text-align: center;
 }
 
-/* General page style */
-h1 {
-    margin: 5px;
-    font-size: 40px;
-}
+/* Specific page style */
 
-h3 {
-    margin: 5px;
-    font-size: 16px;
+.page-title h1 {
+    margin: 10px;
+    background-color: slategrey;
+    color: seashell
 }
 
 #generate-button {
@@ -44,7 +43,8 @@ h3 {
     padding: 10px;
     border: 2px solid seashell;
     border-radius: 10px;
-    display: flex;
+    display: inline-flex;
+    flex-direction: column;
 }
 
 .pack h3 {
