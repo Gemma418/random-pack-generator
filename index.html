@@ -12,30 +12,52 @@
             <h1>RANDOM PACK GENERATOR</h1>
         </div>
         <div class="page-content">
-            <section class = "description">
-                <h2>Welcome to the random pack generator app</h2>
-                <p>Ever wanted to train defecits but find it hard to choose a random number of skaters per pack?</p>
-                <p>
-                    Click the button below to generate two random packs.</br>
-                    Each pack may (or may not) contain:
-                    <ul>
-                        <li>
-                            A jammer
-                        </li>
-                        <li>
-                            A pivot
-                        </li>
-                        <li>
-                            0-3 blockers
-                        </li>
-                    </ul>
-                </p>
+           <!-- button to generate random pack -->
+            <div id="generate-button">
+                <button id="button-generator" onClick="generatePack()">Generate!</button>
+            </div>
+
+            <section>
+                <div class="pack">
+                    <div class="pack-title">
+                        <h2>Pack 1</h2>
+                    </div>
+                    <div class = "pack-table">
+                        <table>
+                            <tr>
+                                <th>Jammer</th>
+                                <th>Pivot</th>
+                                <th>No. of blockers</th>
+                            </tr>
+                            <tr>
+                                <td id="jammer1">Tick or cross from js</td>
+                                <td id="pivot1">Tick or cross from js</td>
+                                <td id="blockers1">Number from js</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
             </section>
-            <section class = "button-section">
-                <div id="generate-button">
-                    <a href="/pack-generator-page.html">
-                        <button id="button-generator" onClick="changeColourTest()">Generate!</button>
-                    </a>
+
+            <section>
+                <div class="pack">
+                    <div class="pack-title">
+                        <h2>Pack 2</h2>
+                    </div>
+                    <div class = "pack-table">
+                        <table>
+                            <tr>
+                                <th>Jammer</th>
+                                <th>Pivot</th>
+                                <th>No. of blockers</th>
+                            </tr>
+                            <tr>
+                                <td id="jammer2">Tick or cross from js</td>
+                                <td id="pivot2">Tick or cross from js</td>
+                                <td id="blockers2">Number from js</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </section>
         </div>
