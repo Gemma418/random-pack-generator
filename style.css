@@ -4,26 +4,24 @@
 /* Mid: #FDA55E */
 /* Light: #EEEED2 */
 
-/* @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     h1 {
       font-size: 36px;
       background-color: green;
     }
-  } */
+  }
 
 /* General page style */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #2F2C2C;
     font-family: Helvetica, sans-serif;
-    color: #EEEED2;
     text-align: center;
 }
 
 th {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -32,7 +30,8 @@ th, td {
 }
 
 h1 {
-    margin: 10px, 0px;
+    margin: 0px;
+    padding: 10px;
     background-color: #FDA55E;
     color: #2F2C2C;
     font-size: 60px;
@@ -49,7 +48,9 @@ img {
 /* Specific page style */
 
 .page-content {
-    margin-top: 25px;
+    background-color: #2F2C2C;
+    font-family: Helvetica, sans-serif;
+    color: #EEEED2;
 }
 
 ul p {
@@ -61,12 +62,13 @@ ul p {
     height: 100px;
     display: inline-flex;
     justify-content: center;
-    padding-bottom: 20px;
+    margin: 15px 0px;
 }
 
 button {
     width: 80%;
     padding: 20px;
+    margin: 20px 0px;
     border: none;
     border-radius: 20px;
     background-color: #FDA55E;
@@ -87,7 +89,8 @@ button:active {
 }
 
 .pack {
-    margin: 10px;
+    background-color: #2F2C2C;
+    margin: 25px 5px 0px;
     padding: 10px;
     width: 80%;
     border: 2px solid #EEEED2;
@@ -101,31 +104,34 @@ button:active {
     padding-top: 10px;
 }
 
+.pack-title h2 {
+    margin: 10px 10px 25px;
+}
+
 .footer-content {
-    margin-top: 100px;
     border-top: #FDA55E 2px solid;
+    background-color: #2F2C2C;
     font-size: 12px;
     display: inline-flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
 }
 
 .footer-content p {
     color: #FDA55E;
-    padding-top:10px;
-    padding-left: 20px;
+    padding: 15px;
     text-align: left;
 }
 
 .socials {
     height: 30px;
-    align-content: right;
     display: inline-flex;
-    padding-top:10px;
-    padding-right: 20px;
+    align-items: center;
+    padding: 5px 15px 0px 0px;
 }
 
 .socials img {
-    height: 30px;
+    height: 40px;
     padding: 5px;
 }

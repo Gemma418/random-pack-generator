@@ -15,9 +15,9 @@ function includeJammer(min, max) {
 }
 
 function includePivot() {
-    let pivot = Math.floor(Math.random() * 3)  + 1;
+    let pivot = Math.floor(Math.random() * 4)  + 1;
 
-    if(pivot === 1 || pivot === 3) {
+    if(pivot === 1 || pivot === 2 || pivot === 3) {
         pivot = "&#10004;";
     } else {
         pivot = "&#10006;";
@@ -27,19 +27,14 @@ function includePivot() {
 }
 
 function numberOfBlockers() {
-    let blockers = Math.floor(Math.random() * 10);
+    let blockers = Math.floor(Math.random() * 11);
+    console.log(blockers);
 
     if(blockers === 0) {
-        // console.log("no blockers");
-        blockers = 0;
-    } else if(blockers === 1 || blockers === 2) {
-        // console.log("one blocker");
         blockers = 1;
-    } else if(blockers >=3 && blockers <= 5) {
-        // console.log("two blockers");
+    } else if(blockers >=1 && blockers <= 4) {
         blockers = 2;
     } else {
-        // console.log("three blockers");
         blockers = 3;
     }
 
