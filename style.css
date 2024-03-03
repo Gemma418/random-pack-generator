@@ -29,7 +29,6 @@ th {
 
 th, td {
     padding: 10px;
-    border: 1px solid #FDA55E;
 }
 
 h1 {
@@ -38,15 +37,6 @@ h1 {
     color: #2F2C2C;
     font-size: 60px;
     text-align: center;
-}
-
-h3 {
-    text-align: center;
-    font-size: 46px
-}
-
-ul {
-    margin-left: 60px;
 }
 
 img {
@@ -66,67 +56,49 @@ ul p {
     list-style-type: circle;
 }
 
-.description h2 {
-    margin: 100px, 50px, 20px, 50px;
-}
-
-.description 
-    p {
-    padding: 15px;
-    font-size: 14px;
-    text-align: left;
-
-}
-
-.description 
-    li {
-    margin: 5px;
-    padding: 2px;
-    font-size: 14px;
-    text-align: left;
-
-}
-
 #generate-button {
-    margin: 10px;
-    width: 250px;
-    height: auto;
+    width: 100%;
+    height: 100px;
     display: inline-flex;
+    justify-content: center;
+    padding-bottom: 20px;
 }
 
-#button-generator {
-    width: 100%;
-    padding: 50px;
-    border: 1px solid #FDA55E;
+button {
+    width: 80%;
+    padding: 20px;
+    border: none;
     border-radius: 20px;
     background-color: #FDA55E;
-    color: rgba(15, 7, 2, 0.993);
+    box-shadow: 0 7px #966945;
+    color: #2F2C2C;
     font-size: 36px;
+    font-weight: bold;
     display: inline-flex;
     justify-content: center;
+    align-items: center;
     cursor: pointer;
 }
 
-#button-regenerator {
-    width: 100%;
-    padding: 20px;
-    border: 1px solid #FDA55E;
-    border-radius: 10px;
-    background-color: #FDA55E;
+button:active {
     color: #2F2C2C;
-    font-size: 16px;
-    display: inline-flex;
-    justify-content: center;
-    cursor: pointer;
+    box-shadow: 0 3px #966945;
+    transform: translateY(3px);
 }
 
 .pack {
     margin: 10px;
     padding: 10px;
+    width: 80%;
     border: 2px solid #EEEED2;
     border-radius: 10px;
     display: inline-flex;
     flex-direction: column;
+}
+
+.pack-table {
+    display: inline-grid;
+    padding-top: 10px;
 }
 
 .footer-content {

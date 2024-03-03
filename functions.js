@@ -6,9 +6,9 @@ function includeJammer(min, max) {
     let jammer = Math.floor(Math.random() * 3)  + 1;
 
     if(jammer === 1 || jammer === 3) {
-        jammer = true;
+        jammer ="&#10004;";
     } else {
-        jammer = false;
+        jammer = "&#10006;";
     };
 
     return jammer;
@@ -18,9 +18,9 @@ function includePivot() {
     let pivot = Math.floor(Math.random() * 3)  + 1;
 
     if(pivot === 1 || pivot === 3) {
-        pivot = true;
+        pivot = "&#10004;";
     } else {
-        pivot = false;
+        pivot = "&#10006;";
     };
 
     return pivot;
@@ -53,8 +53,8 @@ function generatePack() {
     document.getElementById('blockers1').innerHTML = packOne[2];
     let packTwo = []
     
-    if(packOne[0] === false){
-        packTwo = [true, includePivot(), numberOfBlockers()];
+    if(packOne[0] === "&#10006;"){
+        packTwo = ["&#10004;", includePivot(), numberOfBlockers()];
         document.getElementById('jammer2').innerHTML = packTwo[0];
         document.getElementById('pivot2').innerHTML = packTwo[1];
         document.getElementById('blockers2').innerHTML = packTwo[2];
@@ -64,15 +64,4 @@ function generatePack() {
         document.getElementById('pivot2').innerHTML = packTwo[1];
         document.getElementById('blockers2').innerHTML = packTwo[2];
     }
-    
-
-
-
-    // call includeJammer
-    // call includePivot
-    // call numberOfBlockers
-    
-    console.log(packOne, packTwo);
-
-
 }
