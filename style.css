@@ -1,24 +1,24 @@
 
-/* Style colour pallette https://coolors.co/palette/001524-15616d-ffecd1 */
-/* Dark: #001524 */
-/* Mid: #15616D */
-/* Light: #FFECD1 */
+/* Style colour pallette https://coolors.co/eeeed2-fda55e-2F2C2C */
+/* Dark: #2F2C2C */
+/* Mid: #FDA55E */
+/* Light: #EEEED2 */
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
     h1 {
       font-size: 36px;
-      background-color: coral;
+      background-color: green;
     }
-  }
+  } */
 
 /* General page style */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #001524;
+    background-color: #2F2C2C;
     font-family: Helvetica, sans-serif;
-    color: #FFECD1;
+    color: #EEEED2;
     text-align: center;
 }
 
@@ -29,15 +29,13 @@ th {
 
 th, td {
     padding: 10px;
-    border: 1px solid #15616D;
+    border: 1px solid #FDA55E;
 }
-
-/* Specific page style */
 
 h1 {
     margin: 10px, 0px;
-    background-color: #15616D;
-    color: #001524;
+    background-color: #FDA55E;
+    color: #2F2C2C;
     font-size: 60px;
     text-align: center;
 }
@@ -45,6 +43,48 @@ h1 {
 h3 {
     text-align: center;
     font-size: 46px
+}
+
+ul {
+    margin-left: 60px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+
+}
+
+
+/* Specific page style */
+
+.page-content {
+    margin-top: 25px;
+}
+
+ul p {
+    list-style-type: circle;
+}
+
+.description h2 {
+    margin: 100px, 50px, 20px, 50px;
+}
+
+.description 
+    p {
+    padding: 15px;
+    font-size: 14px;
+    text-align: left;
+
+}
+
+.description 
+    li {
+    margin: 5px;
+    padding: 2px;
+    font-size: 14px;
+    text-align: left;
+
 }
 
 #generate-button {
@@ -57,9 +97,9 @@ h3 {
 #button-generator {
     width: 100%;
     padding: 50px;
-    border: 1px solid #15616D;
+    border: 1px solid #FDA55E;
     border-radius: 20px;
-    background-color: #15616D;
+    background-color: #FDA55E;
     color: rgba(15, 7, 2, 0.993);
     font-size: 36px;
     display: inline-flex;
@@ -70,10 +110,10 @@ h3 {
 #button-regenerator {
     width: 100%;
     padding: 20px;
-    border: 1px solid #15616D;
+    border: 1px solid #FDA55E;
     border-radius: 10px;
-    background-color: #15616D;
-    color: #001524;
+    background-color: #FDA55E;
+    color: #2F2C2C;
     font-size: 16px;
     display: inline-flex;
     justify-content: center;
@@ -83,13 +123,37 @@ h3 {
 .pack {
     margin: 10px;
     padding: 10px;
-    border: 2px solid #FFECD1;
+    border: 2px solid #EEEED2;
     border-radius: 10px;
     display: inline-flex;
     flex-direction: column;
 }
 
 .footer-content {
-    color: #001524;
-    background-color: #15616D;
+    margin-top: 100px;
+    border-top: #FDA55E 2px solid;
+    font-size: 12px;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-content p {
+    color: #FDA55E;
+    padding-top:10px;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.socials {
+    height: 30px;
+    align-content: right;
+    display: inline-flex;
+    padding-top:10px;
+    padding-right: 20px;
+}
+
+.socials img {
+    height: 30px;
+    padding: 5px;
 }
