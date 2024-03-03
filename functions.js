@@ -6,66 +6,58 @@ function includeJammer(min, max) {
     let jammer = Math.floor(Math.random() * 3)  + 1;
 
     if(jammer === 1 || jammer === 3) {
-        jammer = "Y";
+        jammer = true;
     } else {
-        jammer = "N";
+        jammer = false;
     };
 
-    console.log("jammer:" + jammer);
-    return jammer;
+    return this.jammer;
 }
 
 function includePivot() {
     let pivot = Math.floor(Math.random() * 3)  + 1;
 
     if(pivot === 1 || pivot === 3) {
-        pivot = "Y";
+        pivot = true;
     } else {
-        pivot = "N";
+        pivot = false;
     };
 
-    console.log("pivot:" + pivot);
-    return pivot;
+    return this.pivot;
 }
 
-const numberOfBlockers = [0, 1, 2, 3]
-const weight = [1, 2, 3, 4]
+function numberOfBlockers() {
+    let blockers = Math.floor(Math.random() * 10);
 
-function numberOfBlockersOnTrack(numberOfBlockers, weight) {
-
-    // array = [0, 1, 1, 2, 2, 2, 3, 3 ,3 ,3]
-    const cumulativeWeights = [];
-
-    for (let i = 0; i < weight.length; i+=1) {
-        cumulativeWeights[i] = weight[i] + (cumulativeWeights[i-1] || 0);
-    }
-    
-    const maxCumulativeWeight = cumulativeWeights[cumulativeWeights.length - 1];
-    const rand = Math.random() * maxCumulativeWeight;
-
-    for (let blockerIndex = 0; blockerIndex < cumulativeWeights.length; blockerIndex +=1) {
-        if (cumulativeWeights[blockerIndex] >= rand) {
-            return {
-                blockers: numberOfBlockers[blockerIndex],
-                index: blockerIndex,
-            };
-        }
-
+    if(blockers === 0) {
+        // console.log("no blockers");
+        blockers = 0;
+    } else if(blockers === 1 || blockers === 2) {
+        // console.log("one blocker");
+        blockers = 1;
+    } else if(blockers >=3 && blockers <= 5) {
+        // console.log("two blockers");
+        blockers = 2;
+    } else {
+        // console.log("three blockers");
+        blockers = 3;
     }
 
-    // console.log("blockers:" + cumulativeWeights);
-    // return cumulativeWeights;
+    return this.blockers;
 }
 
 function generatePack() {
-    let pack = 1;
+    let packOne = [this.includeJammer(), this.includePivot(), this.numberOfBlockers()];
+    
+    let packTwo = [includeJammer(), includePivot(), numberOfBlockers()];
+
+
+
     // call includeJammer
     // call includePivot
     // call numberOfBlockers
     
-    console.log(pack);
+    console.log(packOne, packTwo);
 
-    // return pack
-    return pack;
-    
+
 }
