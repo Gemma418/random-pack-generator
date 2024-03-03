@@ -1,14 +1,14 @@
 
+/* Style colour pallette https://coolors.co/palette/001524-15616d-ffecd1 */
+/* Dark: #001524 */
+/* Mid: #15616D */
+/* Light: #FFECD1 */
+
 @media only screen and (max-width: 600px) {
     h1 {
       font-size: 36px;
-      background-color: springgreen;
+      background-color: coral;
     }
-
-    th {
-        font-size: 16px;
-    }
-
   }
 
 /* General page style */
@@ -16,9 +16,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: rgb(253, 192, 151);
+    background-color: #001524;
     font-family: Helvetica, sans-serif;
-    color: rgba(15, 7, 2, 0.993);
+    color: #FFECD1;
     text-align: center;
 }
 
@@ -29,15 +29,15 @@ th {
 
 th, td {
     padding: 10px;
-    border: 1px solid seashell;
+    border: 1px solid #15616D;
 }
 
 /* Specific page style */
 
 h1 {
-    margin: 10px;
-    background-color: slategrey;
-    color: seashell;
+    margin: 10px, 0px;
+    background-color: #15616D;
+    color: #001524;
     font-size: 60px;
     text-align: center;
 }
@@ -49,18 +49,31 @@ h3 {
 
 #generate-button {
     margin: 10px;
-    width: 150px;
+    width: 250px;
     height: auto;
     display: inline-flex;
 }
 
 #button-generator {
     width: 100%;
-    padding: 10px;
-    border: 1px solid seashell;
-    border-radius: 10px;
-    background-color: rgb(253, 192, 151);
+    padding: 50px;
+    border: 1px solid #15616D;
+    border-radius: 20px;
+    background-color: #15616D;
     color: rgba(15, 7, 2, 0.993);
+    font-size: 36px;
+    display: inline-flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#button-regenerator {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #15616D;
+    border-radius: 10px;
+    background-color: #15616D;
+    color: #001524;
     font-size: 16px;
     display: inline-flex;
     justify-content: center;
@@ -70,8 +83,13 @@ h3 {
 .pack {
     margin: 10px;
     padding: 10px;
-    border: 2px solid seashell;
+    border: 2px solid #FFECD1;
     border-radius: 10px;
     display: inline-flex;
     flex-direction: column;
+}
+
+.footer-content {
+    color: #001524;
+    background-color: #15616D;
 }
