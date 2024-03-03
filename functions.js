@@ -11,7 +11,7 @@ function includeJammer(min, max) {
         jammer = false;
     };
 
-    return this.jammer;
+    return jammer;
 }
 
 function includePivot() {
@@ -23,7 +23,7 @@ function includePivot() {
         pivot = false;
     };
 
-    return this.pivot;
+    return pivot;
 }
 
 function numberOfBlockers() {
@@ -43,13 +43,19 @@ function numberOfBlockers() {
         blockers = 3;
     }
 
-    return this.blockers;
+    return blockers;
 }
 
 function generatePack() {
-    let packOne = [this.includeJammer(), this.includePivot(), this.numberOfBlockers()];
+    const packOne = [includeJammer(), includePivot(), numberOfBlockers()];
+    let packTwo = []
     
-    let packTwo = [includeJammer(), includePivot(), numberOfBlockers()];
+    if(packOne[0] === false){
+        packTwo = [true, includePivot(), numberOfBlockers()];
+    } else {
+        packTwo = [includeJammer(), includePivot(), numberOfBlockers()];
+    }
+    
 
 
 
