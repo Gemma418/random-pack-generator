@@ -27,12 +27,12 @@ function includePivot() {
 }
 
 function numberOfBlockers() {
-    let blockers = Math.floor(Math.random() * 11);
+    let blockers = Math.floor(Math.random() * 101);
     console.log(blockers);
 
-    if(blockers === 0) {
+    if(blockers >= 0 && blockers <= 15) {
         blockers = 1;
-    } else if(blockers >=1 && blockers <= 4) {
+    } else if(blockers >=16 && blockers <= 55) {
         blockers = 2;
     } else {
         blockers = 3;
