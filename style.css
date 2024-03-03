@@ -47,10 +47,20 @@ img {
 
 /* Specific page style */
 
+.whole-page {
+    background-color: #FDA55E;
+}
+
 .page-content {
     background-color: #2F2C2C;
     font-family: Helvetica, sans-serif;
     color: #EEEED2;
+    border-radius: 30px;
+    width: 95%;
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: no-wrap;
+    justify-content: space-evenly;
 }
 
 ul p {
@@ -66,7 +76,6 @@ ul p {
 }
 
 button {
-    width: 80%;
     padding: 20px;
     margin: 20px 0px;
     border: none;
