@@ -48,12 +48,21 @@ function numberOfBlockers() {
 
 function generatePack() {
     const packOne = [includeJammer(), includePivot(), numberOfBlockers()];
+    document.getElementById('jammer1').innerHTML = packOne[0];
+    document.getElementById('pivot1').innerHTML = packOne[1];
+    document.getElementById('blockers1').innerHTML = packOne[2];
     let packTwo = []
     
     if(packOne[0] === false){
         packTwo = [true, includePivot(), numberOfBlockers()];
+        document.getElementById('jammer2').innerHTML = packTwo[0];
+        document.getElementById('pivot2').innerHTML = packTwo[1];
+        document.getElementById('blockers2').innerHTML = packTwo[2];
     } else {
         packTwo = [includeJammer(), includePivot(), numberOfBlockers()];
+        document.getElementById('jammer2').innerHTML = packTwo[0];
+        document.getElementById('pivot2').innerHTML = packTwo[1];
+        document.getElementById('blockers2').innerHTML = packTwo[2];
     }
     
 
